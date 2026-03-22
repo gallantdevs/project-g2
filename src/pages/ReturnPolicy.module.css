@@ -1,0 +1,65 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #111;
+  margin-top: 40px;
+}
+
+.breadcrumb {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.pageTitle {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.section {
+  margin-bottom: 45px;
+}
+
+.sectionTitle {
+  font-size: 22px;
+  font-weight: 600;
+  display: inline-block;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #fdd835;
+  margin-bottom: 18px;
+}
+
+.list {
+  padding-left: 20px;
+}
+
+.list li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.text {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-top: 10px;
+}
+
+.address {
+  margin-top: 12px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.note {
+  margin-top: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.BottomLine{
+  text-decoration: underline;
+
+}

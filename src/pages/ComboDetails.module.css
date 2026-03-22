@@ -1,0 +1,1062 @@
+/* ============================================
+BASE STYLES (Mobile First)
+============================================ */
+
+.page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 12px 8px;
+  padding-top: 85px;
+  font-family: "Arial", sans-serif;
+}
+
+.breadcrumb {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.thumbnailGallery {
+  display: none;
+}
+
+.imageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.mainImageContainer {
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  max-height: clamp(320px, 62vh, 520px);
+  display: flex;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.mainImageContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.mainImageSlide {
+  width: 100%;
+  height: 100%;
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.discountBadge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #ffeb3b;
+  padding: 5px 8px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.comboBadge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ff5722;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 16px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+}
+
+.purchased {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+  border: 2px solid #4caf50;
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin: 0;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+  animation: pulse 2s infinite;
+}
+
+.purchased img {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  animation: heartbeat 1.5s infinite;
+}
+
+.purchased p {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #2e7d32;
+  line-height: 1.3;
+}
+
+.purchased span {
+  display: inline;
+  font-weight: 600;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+  }
+
+  50% {
+    box-shadow: 0 4px 16px rgba(76, 175, 80, 0.3);
+  }
+
+  100% {
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.15);
+  }
+}
+
+@keyframes heartbeat {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+}
+
+.dotIndicators {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  position: relative;
+  z-index: 5;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1d5db;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.dot:hover {
+  background-color: #9ca3af;
+  transform: scale(1.2);
+}
+
+.dotActive {
+  background-color: #111827;
+  transform: scale(1.3);
+}
+
+.productInfo {
+  background: #fff;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.productTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.ratingStars {
+  color: #ffa500;
+  font-size: 0.9rem;
+}
+
+.ratingCount {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.priceSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.currentPrice {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.originalPrice {
+  text-decoration: line-through;
+  color: #888;
+  font-size: 1rem;
+}
+
+.saveTag {
+  background: #4caf50;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.dealBox {
+  background: #fff8e1;
+  border: 2px solid #ffeb3b;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 1rem;
+}
+
+.dealApplied {
+  background: #4caf50;
+  color: white;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.dealInfo {
+  font-size: 0.85rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.dealSavings {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #ff5722;
+}
+
+.UPI {
+  width: 100%;
+  margin: 12px 0;
+}
+
+.selectComboSection {
+  margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.comboSelectRow {
+  background: #f9f9f9;
+  border-radius: 6px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+
+.comboRowHeader {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.colorLabel,
+.sizeLabel {
+  text-align: center;
+}
+
+.selectRow {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.selectDropdown {
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.addToCartBtn {
+  width: 100%;
+  padding: 14px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+  transition: background 0.2s;
+}
+
+.addToCartBtn:hover:not(:disabled) {
+  background: #333;
+}
+
+.addToCartBtn:disabled {
+  background: #bbb;
+  cursor: not-allowed;
+}
+
+.deliverySection {
+  border-top: 1px solid #e0e0e0;
+  padding-top: 1rem;
+}
+
+.deliverySection h4 {
+  font-size: 0.95rem;
+  margin-bottom: 8px;
+}
+
+.pincodeInput {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.pincodeInput input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.pincodeInput button {
+  padding: 10px 16px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.pincodeInput button:disabled {
+  background: #bbb;
+}
+
+.deliveryResult {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.deliveryResult span {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.deliveryInfo {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.deliveryInfo li {
+  margin-bottom: 6px;
+}
+
+.accordion {
+  margin-top: 1rem;
+  border-top: 1px solid #eee;
+}
+
+.accItem {
+  border-bottom: 1px solid #eee;
+}
+
+.accHead {
+  width: 100%;
+  padding: 12px 0;
+  background: none;
+  border: none;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accBody {
+  font-size: 0.85rem;
+  color: #555;
+  padding-bottom: 12px;
+  line-height: 1.6;
+}
+
+.specGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.selectWrapper {
+  position: relative;
+  width: 100%;
+}
+
+.selectWrapper:has(> .selectDropdown) {
+  flex: 1;
+}
+
+.errorIcon {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  pointer-events: none;
+  animation: zigzag 0.4s ease-in-out infinite;
+  z-index: 20;
+}
+
+@keyframes zigzag {
+  0% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateY(-50%) translateX(-4px);
+  }
+
+  50% {
+    transform: translateY(-50%) translateX(4px);
+  }
+
+  75% {
+    transform: translateY(-50%) translateX(-3px);
+  }
+
+  90% {
+    transform: translateY(-50%) translateX(2px);
+  }
+
+  100% {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive for desktop */
+@media (min-width: 640px) {
+  .selectRow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .dotIndicators {
+    gap: 10px;
+    padding: 10px 0;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .errorIcon {
+    font-size: 18px;
+  }
+
+  .mainImageContainer {
+    aspect-ratio: 4 / 5;
+    max-height: clamp(360px, 65vh, 600px);
+  }
+}
+
+/* ============================================
+MEDIA QUERIES - GROUPED BY BREAKPOINT
+============================================ */
+
+@media (min-width: 480px) {
+  .productTitle {
+    font-size: 1.4rem;
+  }
+
+  .currentPrice {
+    font-size: 1.7rem;
+  }
+
+  .dealInfo {
+    font-size: 0.9rem;
+  }
+
+  .purchased {
+    padding: 12px 14px;
+    gap: 10px;
+  }
+
+  .purchased p {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 16px 12px;
+    padding-top: 100px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+
+  .mainImageContainer {
+    aspect-ratio: 4 / 5;
+  }
+
+  .dotIndicators {
+    gap: 12px;
+    padding: 14px 0;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dotActive {
+    transform: scale(1.4);
+  }
+
+  .productInfo {
+    padding: 16px;
+  }
+
+  .productTitle {
+    font-size: 1.6rem;
+  }
+
+  .currentPrice {
+    font-size: 1.9rem;
+  }
+
+  .selectRow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .comboRowHeader {
+    font-size: 0.8rem;
+  }
+
+  .dealBox {
+    padding: 14px;
+  }
+
+  .purchased {
+    padding: 14px 16px;
+    border-radius: 10px;
+  }
+
+  .purchased img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .purchased p {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 24px 16px;
+    padding-top: 120px;
+  }
+
+  .breadcrumb {
+    font-size: 13px;
+  }
+
+  .mainImageContainer {
+    aspect-ratio: 1 / 1;
+  }
+
+  .productTitle {
+    font-size: 1.8rem;
+  }
+
+  .currentPrice {
+    font-size: 2.2rem;
+  }
+
+  .rating {
+    margin-bottom: 1.2rem;
+  }
+
+  .ratingStars {
+    font-size: 1rem;
+  }
+
+  .ratingCount {
+    font-size: 0.95rem;
+  }
+
+  .dealInfo {
+    font-size: 0.95rem;
+  }
+
+  .dealSavings {
+    font-size: 1.1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.1rem;
+  }
+
+  .comboSelectRow {
+    padding: 14px;
+  }
+
+  .selectDropdown {
+    font-size: 0.9rem;
+  }
+
+  .addToCartBtn {
+    padding: 16px;
+    font-size: 1.05rem;
+  }
+
+  .purchased {
+    padding: 16px 18px;
+    border-radius: 12px;
+  }
+
+  .purchased img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .purchased p {
+    font-size: 16px;
+  }
+
+  .mainImageContainer {
+    aspect-ratio: 1 / 1;
+    max-height: clamp(420px, 70vh, 660px);
+  }
+}
+
+/* ===================================================
+Large Laptops & Desktops: 1024px and up
+=================================================== */
+@media (min-width: 1024px) {
+
+
+
+  .productContainer {
+    display: grid;
+    grid-template-columns: 95px 1fr 470px;
+    gap: 20px;
+    align-items: start;
+  }
+
+  .thumbnailGallery {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    padding-right: 4px;
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    max-height: calc(100vh - 140px);
+    z-index: 2;
+  }
+
+  .thumbnailGallery::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  .thumbnailGallery::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .thumbnailGallery::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 4px;
+  }
+
+  .thumbnailGallery::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  .thumbnail {
+    background: #fff;
+    border: 2px solid #e5e7eb;
+    padding: 0;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    flex-shrink: 0;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.25s ease;
+  }
+
+  .thumbnail:hover {
+    border-color: #6b7280;
+  }
+
+  .thumbnail:hover img {
+    transform: scale(1.05);
+  }
+
+  .thumbnailActive {
+    border-color: #111827 !important;
+    box-shadow: 0 0 0 1px #111827;
+  }
+
+  .imageSection {
+    padding: 0;
+    position: relative;
+    align-self: start;
+  }
+
+  .mainImageContainer {
+    overflow: hidden;
+    position: sticky;
+    top: 120px;
+    min-height: 520px;
+    max-height: calc(100vh - 160px);
+    aspect-ratio: 3 / 4;
+    display: block;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+  }
+
+  .mainImageSlide {
+    background: #ffffff;
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mainImage {
+    object-fit: contain;
+    object-position: center;
+  }
+
+
+  .dotIndicators,
+  .purchased {
+    display: none !important;
+  }
+
+  .discountBadge {
+    top: 14px;
+    left: 14px;
+    font-size: 0.7rem;
+    padding: 6px 10px;
+  }
+
+  .comboBadge {
+    top: 14px;
+    right: 14px;
+    font-size: 0.7rem;
+    padding: 6px 11px;
+  }
+
+  .productInfo {
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    padding: 18px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    position: sticky;
+    top: 120px;
+    align-self: start;
+  }
+
+  .productInfo::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  .productInfo::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .productInfo::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 8px;
+  }
+
+  .productInfo::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+  }
+
+  .productTitle {
+    font-size: 1.55rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .rating {
+    margin-bottom: 0.7rem;
+  }
+
+  .ratingStars {
+    font-size: 0.9rem;
+  }
+
+  .ratingCount {
+    font-size: 0.85rem;
+  }
+
+  .currentPrice {
+    font-size: 1.85rem;
+  }
+
+  .originalPrice {
+    font-size: 1rem;
+  }
+
+  .saveTag {
+    font-size: 0.7rem;
+    padding: 4px 9px;
+  }
+
+  .priceSection {
+    padding-bottom: 0.7rem;
+    margin-bottom: 0.7rem;
+    gap: 0.7rem;
+  }
+
+  .dealBox {
+    padding: 13px;
+    margin-bottom: 1.2rem;
+  }
+
+  .dealApplied {
+    font-size: 0.68rem;
+    padding: 4px 9px;
+  }
+
+  .dealInfo {
+    font-size: 0.82rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .dealSavings {
+    font-size: 0.95rem;
+  }
+
+  .sectionTitle {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .comboSelectRow {
+    padding: 11px;
+    margin-bottom: 10px;
+  }
+
+  .comboRowHeader {
+    font-size: 0.72rem;
+    margin-bottom: 6px;
+  }
+
+  .selectDropdown {
+    font-size: 0.82rem;
+  }
+
+  .addToCartBtn {
+    padding: 13px;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .deliverySection h4 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .pincodeInput input,
+  .pincodeInput button {
+    padding: 9px 13px;
+    font-size: 0.82rem;
+  }
+
+  .deliveryInfo {
+    font-size: 0.82rem;
+  }
+
+  .deliveryResult {
+    font-size: 0.82rem;
+  }
+
+  .accHead {
+    font-size: 0.9rem;
+    padding: 10px 0;
+  }
+
+  .accBody {
+    font-size: 0.82rem;
+    padding-bottom: 10px;
+  }
+
+  .specGrid {
+    gap: 9px;
+    font-size: 0.82rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .page {
+    padding: 28px 20px;
+    padding-top: 125px;
+  }
+
+  .productContainer {
+    grid-template-columns: 105px 1fr 510px;
+    gap: 24px;
+  }
+
+  .thumbnailGallery {
+    gap: 11px;
+  }
+
+  .thumbnail {
+    border-radius: 8px;
+  }
+
+  .mainImageContainer {
+    min-height: 620px;
+    border-radius: 10px;
+  }
+
+  .productTitle {
+    font-size: 1.65rem;
+  }
+
+  .currentPrice {
+    font-size: 1.95rem;
+  }
+
+  .dealInfo {
+    font-size: 0.88rem;
+  }
+
+  .dealSavings {
+    font-size: 1.02rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.02rem;
+  }
+
+  .productInfo {
+    padding: 22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mainImageSlide {
+    display: none;
+  }
+
+  .mainImageSlide.activeSlide {
+    display: flex;
+  }
+}

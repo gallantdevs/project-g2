@@ -1,0 +1,1000 @@
+.cartPage {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: #fafafa;
+  padding: 0 20px 20px;
+  min-height: 100vh;
+  margin-top: 8rem;
+}
+
+.cartSecureBar {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: green;
+  border-bottom: 1px solid #eee;
+}
+
+.cartHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cartHeader h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+}
+
+.cartHeader p {
+  font-size: 14px;
+  color: green;
+  font-weight: 500;
+}
+
+.cartContainer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.cartItemsSection {
+  flex: 2;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.cartCard {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.cartItemImg {
+  width: 120px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.cartItemInfo {
+  flex: 1;
+  min-width: 200px;
+}
+
+.cartItemInfo h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.category {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 8px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.mrp {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.off {
+  color: #e55a00;
+  font-weight: 600;
+  margin-left: 6px;
+}
+
+.save {
+  color: green;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.qtySelect {
+  margin-top: 8px;
+  width: 80px;
+  font-size: 14px;
+}
+
+.cartActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.cartActions button {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: #e50914;
+}
+
+.cartActions button svg {
+  margin-right: 6px;
+}
+
+.wishlistBtn {
+  border: none;
+  background: transparent;
+  color: #666;
+}
+
+.wishlistBtn:hover {
+  color: #e55a00;
+}
+
+.cartSummary {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.cartSummary h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.savingsBox {
+  background: #fffacd;
+  border: 1px solid #f0e68c;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.savingsBox p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.applyCouponBtn {
+  background: #fff;
+  border: 2px solid #000 !important;
+  padding: 6px 20px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 13px;
+  color: #000 !important;
+}
+
+.applyCouponBtn:hover {
+  background: #000;
+  color: #fff !important;
+}
+
+.rewardsApplied {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+.rewardsApplied p {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.savingText {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #666;
+  font-size: 13px;
+  cursor: pointer;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+.viewAllCoupons {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #333;
+}
+
+.viewAllCoupons:hover {
+  background: #f5f5f5;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.green {
+  color: green;
+  font-weight: 600;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 15px;
+  font-weight: 700;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.placeOrderBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.placeOrderBtn:hover {
+  background: #333;
+}
+
+.emptyCart {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.emptyImg {
+  width: 320px;
+  max-width: 90%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.couponSidebar {
+  position: fixed;
+  top: 2.2rem;
+  right: -450px;
+  width: 420px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.couponSidebar.open {
+  right: 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+  background: #fff;
+}
+
+.sidebarHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.cartTotal {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.sidebarHeader button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.freeDelivery {
+  background: #e8f5e9;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.activated {
+  color: #2e7d32;
+  margin-left: 5px;
+}
+
+.sidebarContent {
+  padding: 20px;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.couponInputBox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.couponInputBox input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.applyInputBtn {
+  padding: 12px 24px;
+  border: none;
+  background: #000;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.applyInputBtn:hover {
+  background: #333;
+}
+
+.applyInputBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.couponMsg {
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.successMsg {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.errorMsg {
+  background: #ffebee;
+  color: #c62828;
+  border: 1px solid #ef9a9a;
+}
+
+.rewardSection {
+  margin-bottom: 25px;
+}
+
+.rewardSection h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.rewardCard {
+  background: #f9f9f9;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewardLeft {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.coinIcon {
+  font-size: 24px;
+}
+
+.rewardTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.rewardDesc {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.removeRewardBtn {
+  background: transparent;
+  border: 1px solid #000;
+  padding: 6px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.removeRewardBtn:hover {
+  background: #000;
+  color: #fff;
+}
+
+.bestOffers {
+  margin-bottom: 25px;
+}
+
+.bestOffers h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.offerCard {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offerLeft {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.offerIcon {
+  font-size: 24px;
+}
+
+.offerTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 4px 0;
+}
+
+.offerDesc {
+  font-size: 13px;
+  color: #333;
+  margin: 0 0 6px 0;
+}
+
+.specialTag {
+  display: inline-block;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.addMoreText {
+  font-size: 12px;
+  color: #d32f2f;
+  margin: 6px 0 0 0;
+  font-weight: 600;
+}
+
+.applyOfferBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.applyOfferBtn:hover {
+  background: #333;
+}
+
+.addItemsBtn {
+  background: transparent;
+  color: #1976d2;
+  border: 1px solid #1976d2;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.addItemsBtn:hover {
+  background: #e3f2fd;
+}
+
+.otherOffers {
+  margin-bottom: 20px;
+}
+
+.otherOffers h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.sidebarBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1500;
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalBox {
+  background: white;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.modalBox h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modalButtons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.yesBtn,
+.noBtn {
+  padding: 8px 20px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+.yesBtn {
+  background: #000;
+  color: #fff;
+}
+
+.noBtn {
+  background: #f0f0f0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1024px) {
+  .cartContainer {
+    flex-direction: column;
+  }
+  .cartSummary {
+    width: 100%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cartPage {
+    padding: 10px;
+  }
+
+  .cartHeader h1 {
+    font-size: 22px;
+  }
+  .cartHeader p {
+    font-size: 12px;
+  }
+
+  .cartCard {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cartItemImg {
+    width: 150px;
+    height: 160px;
+    margin-bottom: 10px;
+  }
+
+  .cartItemInfo h3 {
+    font-size: 15px;
+  }
+  .cartItemInfo p {
+    font-size: 13px;
+  }
+
+  .price {
+    font-size: 15px;
+  }
+
+  .cartActions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .wishlistBtn,
+  .deleteBtn {
+    font-size: 13px;
+  }
+
+  .cartSummary {
+    padding: 15px;
+  }
+
+  .summaryRow {
+    font-size: 13px;
+  }
+
+  .placeOrderBtn {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .modalBox {
+    width: 280px;
+    padding: 20px;
+  }
+
+  .modalBox h3 {
+    font-size: 18px;
+  }
+
+  .yesBtn,
+  .noBtn {
+    padding: 6px 15px;
+    font-size: 13px;
+  }
+
+  .couponSidebar {
+    width: 100%;
+    right: -100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartItemImg {
+    width: 130px;
+    height: 140px;
+  }
+
+  .cartCard {
+    padding: 10px;
+  }
+
+  .cartSummary h2 {
+    font-size: 16px;
+  }
+
+  .modalBox {
+    width: 260px;
+  }
+
+  .emptyImg {
+    width: 250px;
+  }
+}
+
+.addMoreText {
+  font-size: 12px;
+  color: #d32f2f;
+  margin: 6px 0 0 0;
+  font-weight: 600;
+}
+
+.categoryText {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0 0 0;
+  font-style: italic;
+  text-transform: capitalize;
+}
+
+.expiredText {
+  font-size: 12px;
+  color: #d32f2f;
+  margin: 4px 0 0 0;
+  font-weight: 600;
+}
+
+.noCoupons {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.applyOfferBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #ccc;
+}
+
+.applyOfferBtn:disabled:hover {
+  background: #ccc;
+}
+
+.categoryText {
+  font-size: 12px;
+  color: #666;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+.expiredText {
+  font-size: 12px;
+  color: #d32f2f;
+  margin: 4px 0 0 0;
+  font-weight: 600;
+}
+
+.noCoupons {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-size: 14px;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.floatingNotification {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.3s ease-out;
+  max-width: 400px;
+}
+
+.floatingNotification.success {
+  background-color: #10b981;
+  color: white;
+}
+
+.floatingNotification.warning {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.comboCard {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  margin-bottom: 25px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  padding: 18px 20px;
+  transition: all 0.3s ease;
+}
+
+.comboCard:hover {
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.12);
+}
+
+.comboHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.comboBadge {
+  background: #fff7e6;
+  color: #e67e22;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.comboPrice {
+  font-size: 15px;
+  font-weight: 700;
+  color: #222;
+}
+
+.comboItemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.comboItem {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.comboItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.comboItemImage {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.comboItemInfo h4 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.comboItemInfo p {
+  font-size: 12px;
+  color: #777;
+  margin: 2px 0;
+}
+
+.comboActions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  flex-wrap: wrap;
+}
+
+.comboQtySelect {
+  width: 100px;
+  font-size: 14px;
+}
+
+.removeCombo {
+  background: transparent;
+  border: none;
+  color: #e50914;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.removeCombo svg {
+  margin-right: 6px;
+}
+
+.removeCombo:hover {
+  color: #b00000;
+}
+
+.comboTotal {
+  margin-top: 12px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  color: #000;
+  border-top: 1px dashed #ddd;
+  padding-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .comboItemsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+
+  .comboItemImage {
+    height: 130px;
+  }
+
+  .comboHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .comboBadge {
+    font-size: 12px;
+  }
+}

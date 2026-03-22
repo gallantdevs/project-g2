@@ -1,0 +1,733 @@
+/* ============================================
+   🌐 HOME PAGE - FULLY MOBILE RESPONSIVE CSS
+   ============================================ */
+
+:root {
+  --brand-yellow-primary: #ffcc00;
+  --brand-yellow-dark: #e6b800;
+  --brand-orange-primary: #111111;
+  --brand-orange-dark: #2a2a2a;
+  --brand-black-primary: #000000;
+  --brand-black-secondary: #1a1a1a;
+  --brand-gray-medium: #6f6f6f;
+  --brand-gray-light: #f0f0f0;
+  --brand-gray-lighter: #fafafa;
+  --brand-gray-border: #e6e6e6;
+  --brand-white: #ffffff;
+  --text-primary: #121212;
+  --text-secondary: #6b6b6b;
+  --shadow-sm: rgba(0, 0, 0, 0.06);
+  --shadow-md: rgba(0, 0, 0, 0.1);
+  --shadow-lg: rgba(0, 0, 0, 0.14);
+}
+
+/* Carousel Section */
+.carousel {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-top: 6rem;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.img:hover {
+  box-shadow: 0 8px 24px var(--shadow-md);
+}
+
+.dots {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 1.2rem;
+  display: flex;
+  gap: 6px;
+}
+
+.progressDot {
+  width: 28px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--brand-yellow-primary);
+  transition: width 120ms linear;
+}
+
+/* Heading styles */
+.headingCombo {
+  text-align: center;
+  margin: 42px 0 18px 0;
+}
+
+.headingCombo h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.headingCombo h5 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Scrollable Poster Section */
+.comboScrollWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.comboScroll {
+  width: 88vw;
+  margin: auto;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 8px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.comboScroll::-webkit-scrollbar {
+  display: none;
+}
+
+.comboCard {
+  flex-shrink: 0;
+  min-width: 180px;
+  max-width: 220px;
+  background: var(--brand-white);
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--brand-gray-border);
+  transition: transform 0.25s ease;
+}
+
+.comboCard:hover {
+  transform: translateY(-4px);
+}
+
+.cardImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Scroll buttons */
+.scrollBtnLeft,
+.scrollBtnRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--brand-black-primary);
+  color: var(--brand-white);
+  border: none;
+  font-size: 18px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.25s ease;
+}
+
+.scrollBtnLeft:hover,
+.scrollBtnRight:hover {
+  background: var(--brand-black-secondary);
+}
+
+.scrollBtnLeft {
+  left: 2rem;
+}
+
+.scrollBtnRight {
+  right: 2rem;
+}
+
+/* Coupon Section */
+.couponBarWrapper {
+  width: 90%;
+  background: #181818;
+  padding: 18px;
+  margin: 32px auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px var(--shadow-lg);
+  gap: 16px;
+}
+
+.couponLabel {
+  background: var(--brand-yellow-primary);
+  color: #000;
+  font-weight: 900;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+}
+
+.couponBar {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px;
+  width: 100%;
+}
+
+.couponBar::-webkit-scrollbar {
+  display: none;
+}
+
+.couponImg {
+  min-width: 220px;
+  height: 80px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.couponImg:hover {
+  transform: translateY(-4px);
+}
+
+/* Scrolling Text / Marquee */
+.scrollingtextcontainer {
+  width: 90%;
+  margin: auto;
+  background: var(--brand-yellow-primary);
+  padding: 12px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 90px;
+  display: flex;
+}
+
+.scrollingsection {
+  display: flex;
+  white-space: nowrap;
+
+  animation: scroll-left 24s linear infinite;
+}
+
+.scrollingtext {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 900;
+  margin-right: 42px;
+  color: var(--brand-black-primary);
+  text-transform: uppercase;
+  line-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.scrollingtext1 {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-right: 42px;
+  margin-top: -4rem;
+  color: var(--brand-black-primary);
+  text-transform: uppercase;
+  line-height: 100px;
+  display: flex;
+  align-items: center;
+}
+
+.scrollingtext span {
+  -webkit-text-stroke: 2px var(--brand-black-primary);
+  color: transparent;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Featured Section */
+.featured {
+  display: flex;
+  flex-wrap: wrap;
+  height: 90px;
+}
+
+.featured h1 {
+  background: #000;
+  color: var(--brand-yellow-primary);
+  border-radius: 0 40px 40px 0;
+  padding: 16px 22px;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-top: -13px;
+  z-index: 1;
+}
+
+.scrollingtext img {
+  height: 60px;
+
+}
+
+.filterBar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.filterBtn {
+  padding: 10px 20px;
+  border-radius: 28px;
+  border: 2px solid #000;
+  background: var(--brand-white);
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  transition: all 0.25s ease;
+}
+
+.filterBtn:hover {
+  background: var(--brand-gray-lighter);
+}
+
+.filterBtn.active {
+  background: var(--brand-yellow-primary);
+  border-color: var(--brand-yellow-primary);
+  color: #000;
+}
+
+.newArrivalsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 10px;
+  padding: 20px;
+}
+
+.noProducts {
+  text-align: center;
+  color: var(--text-secondary);
+  background: var(--brand-gray-lighter);
+  padding: 50px 16px;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/* ===============================
+   📱 RESPONSIVE MEDIA QUERIES
+   =============================== */
+
+@media (max-width: 1024px) {
+
+  .scrollBtnLeft,
+  .scrollBtnRight {
+    display: none;
+  }
+
+  .carousel {
+    margin-top: 5.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .carousel {
+    margin-top: 5rem;
+  }
+
+  .headingCombo {
+    margin: 28px 0 14px 0;
+  }
+
+  .headingCombo h3 {
+    font-size: 1.4rem;
+  }
+
+  .headingCombo h5 {
+    font-size: 0.92rem;
+  }
+
+  .comboScroll {
+    width: 92vw;
+    gap: 10px;
+  }
+
+  .comboCard {
+    min-width: 160px;
+    max-width: 180px;
+  }
+
+  .couponBarWrapper {
+    flex-direction: column;
+    padding: 14px;
+  }
+
+  .couponLabel {
+    font-size: 1rem;
+  }
+
+  .couponImg {
+    min-width: 180px;
+    height: 70px;
+  }
+
+  .newArrivalsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    padding: 0 10px;
+  }
+
+  .featured h1 {
+    font-size: 1.8rem;
+  }
+
+  .scrollingtext {
+    font-size: 0.8rem;
+  }
+}
+
+.mostwantedCategory h2 {
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* ===============================================
+   💛 DISCOUNT MARQUEE SECTION (Beyoung Style)
+   =============================================== */
+
+.discountMarqueeContainer {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90.8deg, #c3a631 -6.39%, #d49a38 80.16%);
+  padding: 12px 0;
+  position: relative;
+  white-space: nowrap;
+  margin: 40px 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.discountMarqueeSection {
+  display: flex;
+  animation: scrollDiscount 24s linear infinite;
+}
+
+.discountMarqueeText {
+  display: inline-block;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 80px;
+  letter-spacing: 0.5px;
+}
+
+@keyframes scrollDiscount {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  .discountMarqueeContainer {
+    padding: 10px 0;
+    margin: 28px 0;
+  }
+
+  .discountMarqueeText {
+    font-size: 0.9rem;
+    margin-right: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .discountMarqueeContainer {
+    padding: 8px 0;
+    margin: 20px 0;
+  }
+
+  .discountMarqueeText {
+    font-size: 0.85rem;
+    margin-right: 40px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .mostwantedCategory+div {
+    display: grid !important;
+    grid-template-columns: repeat(3,
+        1fr) !important;
+    /* ✅ 3 per row for tablets */
+    gap: 14px !important;
+    justify-items: center;
+  }
+
+  .mostwantedCategory+div img {
+    max-width: 180px !important;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .mostwantedCategory+div {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+    justify-items: center;
+    width: 100%;
+    margin: auto;
+  }
+
+  .mostwantedCategory+div img {
+    width: 100% !important;
+    max-width: 160px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+  }
+
+  .mostwantedCategory h2 {
+    font-size: 16px !important;
+    text-align: center;
+    margin-top: 2rem !important;
+    margin-bottom: 1.8rem;
+  }
+
+  .carousel {
+    margin-top: 0.5rem;
+  }
+
+  .dots {
+    bottom: 0.6rem;
+    gap: 4px;
+  }
+
+  .progressDot {
+    width: 22px;
+    height: 3px;
+  }
+
+  .headingCombo {
+    margin: 22px 0 12px 0;
+  }
+
+  .headingCombo h3 {
+    font-size: 1.2rem;
+  }
+
+  .headingCombo h5 {
+    font-size: 0.85rem;
+  }
+
+  .comboScrollWrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .comboScroll {
+    width: 94vw;
+    gap: 8px;
+    padding: 6px 4px;
+  }
+
+  .comboCard {
+    min-width: 140px;
+    max-width: 160px;
+    border-radius: 8px;
+  }
+
+  .couponImg {
+    min-width: 150px;
+    width: 150px;
+    height: 55px;
+  }
+
+  .newArrivalsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 8px;
+  }
+
+  .filterBar {
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .filterBtn {
+    min-width: 100px;
+    font-size: 11px;
+    padding: 7px 12px;
+  }
+
+  .featured h1 {
+    font-size: 1.4rem;
+    text-align: center;
+    border-radius: 10px;
+    padding: 12px 18px;
+  }
+
+  .scrollingtext {
+    font-size: 0.5rem;
+    margin-right: 28px;
+  }
+
+  .scrollingtext img {
+    height: 50px;
+  }
+
+  .couponBarWrapper {
+    padding: 12px;
+    margin: 24px auto;
+  }
+
+  .couponLabel {
+    padding: 8px 12px;
+    font-size: 0.95rem;
+  }
+
+  .scrollBtnLeft,
+  .scrollBtnRight {
+    display: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .comboCard {
+    min-width: 133px;
+    max-width: 245px;
+  }
+
+  .comboCard img {
+    width: 150px !important;
+    height: 190px !important;
+    border-radius: 9px !important;
+  }
+
+  .headingCombo h3 {
+    font-size: 1.1rem;
+  }
+
+  .headingCombo h5 {
+    font-size: 0.8rem;
+  }
+
+  .newArrivalsGrid {
+    gap: 8px;
+    padding: 0 6px;
+  }
+
+  .filterBtn {
+    min-width: 90px;
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+}
+
+/* ===============================================
+   📱 CATEGORY CIRCLE SECTION - RESPONSIVE
+   Hidden on Desktop, Visible on Tablet & Mobile
+   =============================================== */
+
+.categorySection {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .categorySection {
+    display: block;
+    width: 100%;
+    background-color: #fff;
+    border-top: 1px solid var(--brand-gray-border);
+    border-bottom: 1px solid var(--brand-gray-border);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    padding: 0.75rem 0.5rem;
+
+    margin-top: 10px;
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .categorySection .title {
+    display: none;
+  }
+
+  .categorySection .scrollContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 12px;
+    padding: 0 10px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 92px;
+    justify-content: flex-start;
+    height: 89px;
+  }
+
+  .categorySection .scrollContainer::-webkit-scrollbar {
+    display: none;
+  }
+
+  .categorySection .circleCard {
+    flex: 0 0 auto;
+    text-align: center;
+    min-width: 75px;
+    max-width: 80px;
+  }
+
+  .categorySection .circleImage {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+  }
+
+  .categorySection .circleImage img {
+    width: 100%;
+    height: 127%;
+    object-fit: contain;
+    border-radius: 50%;
+    /* border: 2px solid #111; */
+    transition: transform 0.25s ease;
+  }
+
+  .categorySection .circleImage img:hover {
+    transform: scale(1.05);
+  }
+
+  .categorySection .circleLabel {
+    font-size: 0.7rem;
+    font-weight: 600;
+    margin-top: 6px;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 1.2;
+    word-break: break-word;
+  }
+}

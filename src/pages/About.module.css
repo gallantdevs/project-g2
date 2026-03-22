@@ -1,0 +1,139 @@
+
+.aboutSection {
+  width: 100%;
+  background-color: var(--brand-gray-lighter);
+
+  padding-top: calc(var(--topstrip-offset) + var(--navbar-height) + 32px);
+  padding-bottom: 80px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: var(--brand-white);
+  padding: 48px;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px var(--shadow-md);
+}
+
+/* Heading */
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  color: var(--brand-black-primary);
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  width: 72px;
+  height: 4px;
+  background: var(--brand-yellow-primary);
+  display: block;
+  margin-top: 10px;
+  border-radius: 2px;
+}
+
+/* Paragraphs */
+.description {
+  font-size: 16px;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 22px;
+}
+
+/* Cards */
+.card {
+  background: var(--brand-gray-light);
+  padding: 26px;
+  border-left: 5px solid var(--brand-yellow-primary);
+  margin: 32px 0;
+  border-radius: 10px;
+}
+
+.card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: var(--brand-black-primary);
+}
+
+.card p {
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+/* Values */
+.values {
+  margin-top: 42px;
+}
+
+.values h2 {
+  margin-bottom: 14px;
+  font-size: 24px;
+  color: var(--brand-black-primary);
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--brand-gray-border);
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* Footer line */
+.footerLine {
+  margin-top: 44px;
+  text-align: center;
+  font-weight: 700;
+  color: var(--brand-orange-primary);
+}
+
+/* ===================== MOBILE ===================== */
+@media (max-width: 768px) {
+  .aboutSection {
+    padding-top: calc(var(--topstrip-offset) + var(--navbar-height) + 20px);
+    padding-bottom: 60px;
+  }
+
+  .container {
+    padding: 28px 20px;
+    border-radius: 10px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .card h2,
+  .values h2 {
+    font-size: 20px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .title {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+
+  .card {
+    padding: 20px;
+  }
+}

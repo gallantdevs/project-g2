@@ -1,0 +1,115 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  background-color: #0f172a; 
+}
+
+.noScroll {
+  overflow: hidden !important;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 100px 32px 32px 32px; 
+  transition: margin-left 0.3s ease;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #0f172a; 
+  color: #e2e8f0;
+  margin-top: 1rem;
+}
+
+.hamburgerButton {
+  display: none;
+  position: fixed;
+  top: 75px; /* ✅ Changed from 15px to 75px to appear below navbar */
+  left: 15px;
+  z-index: 1100;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  transition: all 0.2s ease;
+}
+
+.hamburgerButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.6);
+}
+
+.overlay {
+  display: block;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  backdrop-filter: blur(2px);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (min-width: 960px) {
+  .main {
+    margin-left: 260px; 
+    padding: 100px 40px 40px 40px;
+  }
+
+  .sidebarCollapsed {
+    margin-left: 80px;
+  }
+
+  .hamburgerButton,
+  .overlay {
+    display: none;
+  }
+}
+
+@media (max-width: 959px) {
+  .main {
+    margin-left: 0;
+    padding: 90px 24px 24px 24px;
+  }
+
+  .hamburgerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding: 80px 16px 16px 16px;
+  }
+
+  .hamburgerButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 70px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    padding: 70px 12px 12px 12px;
+  }
+
+  .hamburgerButton {
+    top: 98px;
+    left: 12px;
+    padding: 10px 12px;
+    font-size: 18px;
+  }
+}

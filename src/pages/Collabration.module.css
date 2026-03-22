@@ -1,0 +1,232 @@
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+.container {
+     max-width: 1200px;
+     margin: 0 auto;
+     padding: 40px 20px;
+     font-family: 'Poppins', sans-serif;
+     margin-top: 50px;
+}
+
+.heading {
+     text-align: center;
+     font-size: 32px;
+     font-weight: 700;
+     margin-bottom: 40px;
+     color: #000;
+}
+
+.grid {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 30px;
+}
+
+.card {
+     border-radius: 16px;
+     padding: 30px 20px;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: flex-start;
+     min-height: 420px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     transition: transform 0.3s ease;
+     position: relative;
+     text-align: center;
+}
+
+.card:hover {
+     transform: translateY(-5px);
+}
+
+
+.logoContainer {
+     height: 100%;
+     width: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 25px;
+}
+
+.logoImg {
+     max-height: 100%;
+     max-width: 100%;
+     object-fit: contain;
+}
+
+.offerBox {
+     width: 100%;
+     padding: 15px 10px;
+     border-radius: 12px;
+     margin-bottom: 15px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     min-height: 100px;
+}
+
+.offerTitle {
+     font-size: 16px;
+     font-weight: 500;
+     margin-bottom: 5px;
+     line-height: 1.3;
+}
+
+.offerAmount {
+     font-size: 26px;
+     font-weight: 700;
+     display: block;
+}
+
+.subText {
+     font-size: 14px;
+     margin-bottom: 20px;
+     line-height: 1.5;
+     opacity: 0.9;
+     flex-grow: 1;
+}
+
+.redeemBtn {
+     padding: 12px 35px;
+     border-radius: 50px;
+     border: none;
+     font-weight: 600;
+     font-size: 14px;
+     cursor: pointer;
+     text-transform: uppercase;
+     transition: opacity 0.3s ease;
+     margin-top: auto;
+}
+
+.redeemBtn:hover {
+     opacity: 0.9;
+     transform: scale(1.05);
+}
+
+/* ====================================
+   THEMES (Colors based on Images)
+   ==================================== */
+
+.credTheme {
+     background-color: #000000;
+     color: #ffffff;
+     border: 1px solid #333;
+}
+
+.credTheme .offerBox {
+     background-color: #ffffff;
+     color: #000000;
+}
+
+.credTheme .redeemBtn {
+     background-color: #ffffff;
+     color: #000000;
+}
+
+.hdfcTheme {
+     background-color: #ffffff;
+     border: 2px solid #004c8f;
+     color: #004c8f;
+}
+
+.hdfcTheme .offerBox {
+     background-color: #003366;
+     color: #ffffff;
+}
+
+.hdfcTheme .redeemBtn {
+     background-color: #003366;
+     color: #ffffff;
+}
+
+.mobikwikTheme {
+     background-color: #0066d5;
+     color: #ffffff;
+}
+
+.mobikwikTheme .offerBox {
+     background-color: #ffffff;
+     color: #0066d5;
+}
+
+.mobikwikTheme .redeemBtn {
+     background-color: #ffffff;
+     color: #0066d5;
+}
+
+.freechargeTheme {
+     background-color: #ffffff;
+     border: 1px solid #ffe5db;
+     color: #555;
+}
+
+.freechargeTheme .offerBox {
+     background-color: #f05a28;
+     color: #ffffff;
+}
+
+.freechargeTheme .redeemBtn {
+     background-color: #f05a28;
+     color: #ffffff;
+}
+
+.flashTheme {
+     background-color: #6a4bcb;
+     color: #ffffff;
+}
+
+.flashTheme .offerBox {
+     background-color: #ffffff;
+     color: #000000;
+}
+
+.flashTheme .redeemBtn {
+     background-color: #ffffff;
+     color: #6a4bcb;
+}
+
+/* ====================================
+   RESPONSIVE (Mobile & Tablet)
+   ==================================== */
+@media (max-width: 992px) {
+     .grid {
+          grid-template-columns: repeat(2, 1fr);
+     }
+}
+
+@media (max-width: 600px) {
+     .grid {
+          grid-template-columns: 1fr;
+     }
+
+     .heading {
+          font-size: 24px;
+          margin-bottom: 30px;
+     }
+
+     .card {
+          min-height: auto;
+          padding: 25px 15px;
+     }
+}

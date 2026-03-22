@@ -1,0 +1,611 @@
+
+:root {
+  --primary: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #8b5cf6;
+  --success: #10b981;
+  --danger: #ef4444;
+  --warning: #f59e0b;
+  --text-dark: #ffffff;
+  --text-medium: #cbd5e1;
+  --text-light: #94a3b8;
+  --bg-dark: #0f172a;
+  --bg-card: #1e293b;
+  --border: #334155;
+  --border-light: #475569;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.6);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+  padding: 1.5rem;
+  background-color: var(--bg-dark);
+  min-height: 100vh;
+  color: var(--text-medium);
+}
+
+.headRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.loadingText {
+  color: var(--text-light);
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.listWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --- Card Layout --- */
+.orderCard {
+  background: var(--bg-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.orderCard:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-light);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1rem 1.5rem;
+  background-color: var(--bg-dark);
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.orderId {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  display: block;
+}
+
+.orderDate {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  display: block;
+  margin-top: 4px;
+}
+
+.orderUser {
+  font-size: 0.9rem;
+  text-align: right;
+  color: var(--text-medium);
+}
+
+.orderUser p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.orderUser strong {
+  color: var(--text-dark);
+}
+
+.cardBody {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+}
+
+.columnTitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--primary-light);
+  padding-bottom: 8px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.itemImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.itemDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+.itemTitle {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  margin-bottom: 2px;
+}
+
+.itemVariant {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.itemQty {
+  font-size: 0.85rem;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.itemPrice {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  margin-left: auto;
+}
+
+.cardSummary {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.summaryItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  line-height: 1.5;
+}
+
+.summaryItem strong {
+  color: var(--text-medium);
+  white-space: nowrap;
+}
+
+.summaryItem span {
+  text-align: right;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.returnValue {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.cardActions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.btn,
+.btnUpdate,
+.btnDelete,
+.btnDispatch,
+.btnTrack,
+.btnApprove,
+.btnReject,
+.btnReceive,
+.btnRefund,
+.btnSave,
+.btnCancel {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btnDispatch {
+  background-color: var(--success);
+  color: white;
+}
+
+.btnDispatch:hover {
+  background-color: #059669;
+}
+
+.btnTrack {
+  background-color: var(--warning);
+  color: #1a1a1a;
+}
+
+.btnTrack:hover {
+  background-color: #d97706;
+}
+
+.btnUpdate {
+  background-color: var(--primary);
+  color: white;
+}
+
+.btnUpdate:hover {
+  background-color: var(--primary-dark);
+}
+
+.btnDelete {
+  background-color: var(--danger);
+  color: white;
+}
+
+.btnDelete:hover {
+  background-color: #c0392b;
+}
+
+.btnSave {
+  background-color: var(--success);
+  color: white;
+}
+
+.btnCancel {
+  background-color: var(--border-light);
+  color: var(--text-dark);
+}
+
+.btnCancel:hover {
+  background-color: var(--border);
+}
+
+
+.btnApprove {
+  background-color: #064e3b;
+  color: #a7f3d0;
+  border: 1px solid #065f46;
+}
+
+.btnApprove:hover {
+  background-color: #047857;
+}
+
+.btnReject {
+  background-color: #7f1d1d;
+  color: #fecaca;
+  border: 1px solid #991b1b;
+}
+
+.btnReject:hover {
+  background-color: #991b1b;
+}
+
+.btnReceive {
+  background-color: #78350f;
+  color: #fde68a;
+  border: 1px solid #92400e;
+}
+
+.btnReceive:hover {
+  background-color: #92400e;
+}
+
+.comboBlock {
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btnRefund {
+  background-color: #1e40af;
+  color: #bfdbfe;
+  border: 1px solid #1d4ed8;
+}
+
+.btnRefund:hover {
+  background-color: #1d4ed8;
+}
+
+
+.returnActions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.returnReason {
+  font-size: 0.8rem;
+  color: var(--danger);
+  font-style: italic;
+}
+
+.returnComplete {
+  font-size: 0.9rem;
+  color: var(--success);
+  font-weight: 600;
+}
+
+.returnTxn {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  display: block;
+}
+
+.statusBadge,
+.returnBadge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: white;
+  text-transform: capitalize;
+}
+
+.payment-pending {
+  background-color: var(--warning);
+  color: #1a1a1a;
+}
+
+.payment-paid {
+  background-color: var(--success);
+}
+
+.payment-failed {
+  background-color: var(--danger);
+}
+
+.order-processing {
+  background-color: var(--primary);
+}
+
+.order-shipped {
+  background-color: var(--warning);
+  color: #1a1a1a;
+}
+
+.order-delivered {
+  background-color: var(--success);
+}
+
+.order-cancelled {
+  background-color: #7f8c8d;
+}
+
+.return-pending {
+  background-color: var(--warning);
+  color: #1a1a1a;
+}
+
+.return-approved {
+  background-color: var(--success);
+}
+
+.return-rejected {
+  background-color: var(--danger);
+}
+
+.return-received {
+  background-color: var(--primary);
+}
+
+.return-completed {
+  background-color: var(--success);
+}
+
+
+.modalBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 16px;
+}
+
+.modal {
+  background: var(--bg-card);
+  padding: 0;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem;
+}
+
+.modalHeader h3 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.btnClose {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--text-light);
+}
+
+.btnClose:hover {
+  color: var(--text-dark);
+}
+
+.modalBody {
+  padding: 1.5rem;
+  background-color: var(--bg-dark);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-weight: 600;
+  color: var(--text-medium);
+}
+
+.form select,
+.form input {
+  padding: 12px 14px;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  background: #2e3d54;
+  color: #ffffff;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form select:focus,
+.form input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #394b63;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form input[readonly] {
+  background: var(--border);
+  color: var(--text-light);
+  cursor: not-allowed;
+}
+
+.form .row {
+  display: flex;
+  gap: 1rem;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-card);
+}
+
+.modalFooter .btn {
+  width: auto;
+}
+
+
+@media (max-width: 900px) {
+  .cardBody {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cardActions {
+    grid-row: 2;
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 650px) {
+  .container {
+    padding: 1rem 0.5rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .orderUser {
+    text-align: left;
+    width: 100%;
+    padding-top: 0.5rem;
+    border-top: 1px dashed var(--border);
+  }
+
+  .cardBody {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .cardActions {
+    grid-row: auto;
+    grid-column: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .cardActions .btn {
+    flex-grow: 1;
+    min-width: calc(50% - 10px);
+  }
+
+  .form .row {
+    flex-direction: column;
+  }
+
+  .modal {
+    width: 100%;
+    padding: 0;
+  }
+}

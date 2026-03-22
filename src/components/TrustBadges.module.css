@@ -1,0 +1,101 @@
+.trustRowSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem 0.5rem;
+  background: #f9fafb;
+  margin: 1.5rem 0;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.trustRowSection img {
+  max-width: 70px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* Small phones (≥ 360px) */
+@media (min-width: 360px) {
+  .trustRowSection img {
+    max-width: 75px;
+  }
+}
+
+/* Larger phones (≥ 480px) */
+@media (min-width: 480px) {
+  .trustRowSection {
+    gap: 1rem;
+    padding: 1.25rem 0.75rem;
+    margin: 1.75rem 0;
+  }
+
+  .trustRowSection img {
+    max-width: 85px;
+  }
+}
+
+/* Tablets (≥ 640px) */
+@media (min-width: 640px) {
+  .trustRowSection {
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    margin: 2rem 0;
+  }
+
+  .trustRowSection img {
+    max-width: 100px;
+  }
+}
+
+/* Medium tablets (≥ 768px) */
+@media (min-width: 768px) {
+  .trustRowSection {
+    gap: 2rem;
+    padding: 1.75rem 1.25rem;
+  }
+
+  .trustRowSection img {
+    max-width: 110px;
+  }
+}
+
+/* Laptops (≥ 1024px) */
+@media (min-width: 1024px) {
+  .trustRowSection {
+    gap: 2.5rem;
+    padding: 2rem 1.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .trustRowSection img {
+    max-width: 130px;
+  }
+}
+
+/* Large desktops (≥ 1280px) */
+@media (min-width: 1280px) {
+  .trustRowSection {
+    gap: 3rem;
+    padding: 2.25rem 2rem;
+  }
+
+  .trustRowSection img {
+    max-width: 140px;
+  }
+}
+
+/* Extra large screens (≥ 1536px) */
+@media (min-width: 1536px) {
+  .trustRowSection {
+    gap: 3.5rem;
+    padding: 2.5rem 2rem;
+  }
+
+  .trustRowSection img {
+    max-width: 150px;
+  }
+}

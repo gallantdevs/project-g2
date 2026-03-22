@@ -1,0 +1,481 @@
+:root {
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --cl-bg-page: #f8f8f8;
+  --cl-bg-card: #ffffff;
+  --cl-text-primary: #333;
+  --cl-text-secondary: #666;
+  --cl-border-color: #e0e0e0;
+  --cl-border-color-light: #eee;
+  --cl-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --cl-shadow-md: 0 1px 8px rgba(0, 0, 0, 0.06);
+  --cl-color-brand: #000;
+  --cl-color-brand-text: #fff;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.pageWrap {
+  display: flex;
+  gap: 32px;
+  padding: 32px 40px;
+  background: var(--cl-bg-page);
+  color: var(--cl-text-primary);
+  font-family: var(--font-main);
+  margin-top: -10px;
+  min-width: 0;
+}
+
+.sidebar {
+  border: 1px solid var(--cl-border-color);
+  background: var(--cl-bg-card);
+  border-radius: 10px;
+  padding: 0;
+  position: sticky;
+  top: 148px;
+  box-shadow: var(--cl-shadow-md);
+  width: 260px;
+  flex-shrink: 0;
+  z-index: 10;
+  height: fit-content;
+  margin-top: 70px;
+}
+
+.sidebarCollapsed {
+  display: none;
+}
+
+.sheetBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.34);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s;
+  z-index: 998;
+}
+
+.sheetBackdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.filterSheet {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 75vh;
+  max-height: 90vh;
+  background: var(--cl-bg-card);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.13);
+  transform: translateY(105%);
+  transition: transform 0.27s cubic-bezier(0.2, 0.82, 0.31, 1.08);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.filterSheet.open {
+  transform: translateY(0);
+}
+
+.sheetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 21px 9px 17px;
+  border-bottom: 1px solid var(--cl-border-color-light);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.sheetActions {
+  display: flex;
+  gap: 10px;
+}
+
+.sheetClear {
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  padding: 7px 14px;
+  border-radius: 7px;
+  font-size: 14px;
+  color: var(--cl-text-primary);
+  cursor: pointer;
+}
+
+.sheetClose {
+  background: var(--cl-color-brand);
+  color: var(--cl-color-brand-text);
+  border: 1px solid var(--cl-color-brand);
+  padding: 7px 18px;
+  border-radius: 7px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.sheetBody {
+  padding: 9px 19px 24px 19px;
+  overflow-y: auto;
+}
+
+.mobileFilterBtn {
+  display: none;
+}
+
+.filterHeaderBtn {
+  width: 100%;
+  background: var(--cl-bg-card);
+  border: none;
+  border-bottom: 1px solid var(--cl-border-color);
+  padding: 14px 24px;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--cl-text-primary);
+}
+
+.filterHeaderBtn:hover {
+  background: #fdfdfd;
+}
+
+.chevDown {
+  transform: rotate(0deg);
+  transition: transform 0.2s;
+}
+
+.chevUp {
+  transform: rotate(180deg);
+  transition: transform 0.2s;
+}
+
+.filterBody {
+  max-height: 1500px;
+  overflow: hidden;
+  transition: max-height 0.21s, padding 0.22s;
+}
+
+.filterBody.open {
+  max-height: 1500px;
+  padding: 16px 20px;
+}
+
+.filterBody.closed {
+  max-height: 0;
+  padding: 0 20px;
+}
+
+.group {
+  border-bottom: 1px solid var(--cl-border-color-light);
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.group:last-of-type {
+  border-bottom: none;
+}
+
+.groupTitleBtn {
+  width: 100%;
+  background: var(--cl-bg-card);
+  border: none;
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: var(--cl-text-primary);
+}
+
+.groupTitle {
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--cl-text-secondary);
+  text-transform: uppercase;
+}
+
+.groupBody {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s, padding 0.3s;
+}
+
+.groupBody.open {
+  max-height: 500px;
+  overflow-y: auto;
+  padding-bottom: 8px;
+}
+
+.groupBody.closed {
+  max-height: 0;
+  padding-bottom: 0;
+}
+
+.colorOptionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.colorOptionItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.colorLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.colorCheckbox {
+  cursor: pointer;
+  accent-color: var(--cl-color-brand);
+}
+
+.colorName {
+  color: var(--cl-text-primary);
+  user-select: none;
+}
+
+.colorCount {
+  color: var(--cl-text-secondary);
+  font-size: 13px;
+}
+
+.swatch {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.clearRow {
+  margin-top: 16px;
+  padding: 16px 0 0 0;
+  border-top: 1px solid var(--cl-border-color-light);
+}
+
+.clearBtn {
+  background: var(--cl-bg-card);
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--cl-text-primary);
+  transition: border-color 0.2s;
+}
+
+.clearBtn:hover {
+  border-color: #f72c2c;
+}
+
+.main {
+  min-width: 0;
+  padding-left: 0;
+  margin-top: 86px;
+  flex-grow: 1;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 16px;
+}
+
+.pillsToolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pillsRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 16px 0 20px 0;
+  border-bottom: 1px solid var(--cl-border-color);
+  margin-bottom: 0;
+  scrollbar-width: none;
+}
+
+.pillsRow::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  appearance: none;
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  color: var(--cl-text-primary);
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.pill:hover {
+  background: #eee;
+  border-color: #aaa;
+}
+
+.pillPrimary {
+  font-weight: 600;
+}
+
+.pillActive {
+  background: var(--cl-color-brand);
+  color: var(--cl-color-brand-text);
+  border-color: var(--cl-color-brand);
+  font-weight: 600;
+}
+
+.pillsRow::after {
+  display: none;
+}
+
+.descriptionBox {
+  margin: 15px 0 30px 0;
+  padding: 0;
+}
+
+.descriptionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--cl-color-brand);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.descriptionText {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--cl-text-secondary);
+  margin-bottom: 15px;
+}
+
+.sortRow {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 0.875rem;
+  padding: 10px 0;
+  border-top: 1px solid var(--cl-border-color-light);
+  border-bottom: 1px solid var(--cl-border-color-light);
+  margin: 10px 0;
+}
+
+.sortLabel {
+  color: var(--cl-text-secondary);
+  font-weight: 500;
+  margin-right: 8px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.sortSelect {
+  width: 200px;
+  font-size: 0.8rem;
+}
+
+.loadingBox,
+.noProducts {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.loadingBox {
+  color: var(--cl-text-secondary);
+}
+
+.noProducts {
+  color: #999;
+  font-weight: 600;
+}
+
+.errorContainer {
+  padding: 70px 0 30px 0;
+  text-align: center;
+  color: #a03434;
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .pageWrap {
+    flex-direction: column;
+    padding: 24px 10px;
+  }
+
+  .sidebar {
+    display: none;
+    width: auto;
+    position: static;
+    margin-top: 0;
+  }
+
+  .mobileFilterBtn {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 14px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background: var(--cl-bg-card);
+    color: var(--cl-text-primary);
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+  }
+
+  .mobileFilterBtn:hover {
+    background-color: #f5f5f5;
+    border-color: #bbb;
+  }
+
+  .grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrap {
+    padding: 10px 4px;
+  }
+
+  .grid {
+    gap: 8px;
+  }
+}
+

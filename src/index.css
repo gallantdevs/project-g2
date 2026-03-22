@@ -1,0 +1,45 @@
+:root {
+  --brand-bg: #ffffff;
+  --brand-text: #111111;
+  --brand-muted: #444444;
+  --accent: #ffd400;
+  --accent-ink: #000000;
+  --ink: #000000;
+  --ink-2: #222222;
+  --ink-3: #555555;
+  --ink-4: #777777;
+  --line: #e8e9eb;
+  --line-2: #d9dadb;
+  --pill-bg: #ffffff;
+  --pill-border: #d9dadb;
+  --pill-hover-border: #c7c8ca;
+  --pill-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --pill-hover-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --pill-active-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
+  --chip-bg: #f7f7f7;
+  --chip-border: #dddddd;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 10px;
+  --space-4: 12px;
+  --space-5: 14px;
+  --space-6: 16px;
+  --space-7: 18px;
+  --space-8: 20px;
+  --shadow-1: 0 1px 2px rgba(0, 0, 0, 0.06);
+  --shadow-2: 0 6px 18px rgba(0, 0, 0, 0.08);
+  --font-ui: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --focus: rgba(171, 161, 110, 0.35);
+  --topstrip-height: 0px;
+  --topstrip-offset: 0px;
+}
+
+
+
+body.topstrip-visible {
+  --topstrip-offset: var(--topstrip-height);
+}

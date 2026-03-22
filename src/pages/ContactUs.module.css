@@ -1,0 +1,128 @@
+.pageWrapper {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  width: 100%;
+}
+
+.topBar {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.navLinks {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
+.heroSection {
+  background-color: #f9f9f9;
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 150px;
+}
+
+.heroText h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.heroText p {
+  font-size: 16px;
+  color: #555;
+  margin: 0;
+}
+
+.heroImage img {
+  height: 120px;
+  object-fit: contain;
+}
+
+.contentArea {
+  padding: 40px 50px;
+  line-height: 1.6;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.description {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.contactList li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.bullet {
+  margin-right: 8px;
+  font-size: 20px;
+  line-height: 0;
+}
+
+.link {
+  color: #00bfff; 
+  text-decoration: underline;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.workingHours {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.note {
+  font-style: italic;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.policyLink {
+  font-size: 14px;
+}

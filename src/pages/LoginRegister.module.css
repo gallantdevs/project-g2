@@ -1,0 +1,470 @@
+/* LoginRegister.module.css */
+
+
+.LoginRegisterContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 12px;
+  background-color: #000000 !important;
+  transform: translateY(0);
+  transition: transform .28s ease, box-shadow .28s ease, opacity .2s ease;
+  will-change: transform;
+}
+
+.LoginRegisterContainer p {
+  color: #fff;
+  margin: 0 !important;
+  font-size: 13.5px;
+  line-height: 1.2;
+  flex: 1 1 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.loginButton {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+
+.hide {
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scrolled {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .18);
+}
+
+.accountWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.accountDropdown {
+  position: relative;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 220px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .15);
+  z-index: 10003;
+  overflow: hidden;
+}
+
+.accountDropdown:hover .dropdownMenu {
+  display: block;
+}
+
+.userInfo {
+  padding: 12px 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdownMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 6px 0;
+}
+
+.dropdownMenu li {
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.dropdownMenu li:hover {
+  background: #f7f7f7;
+}
+
+/* Modal */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10002;
+  backdrop-filter: blur(4px);
+}
+
+.modalContainer {
+  background: #fff;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+  animation: modalSlideIn .3s ease-out;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(.9) translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.closeButton {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  color: #999;
+  cursor: pointer;
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all .2s;
+}
+
+.closeButton:hover {
+  background: #f5f5f5;
+  color: #333;
+}
+
+.modalContent {
+  padding: 30px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.loginImg {
+  width: 100%;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.form {
+  margin-bottom: 20px;
+}
+
+.formGroup {
+  margin-bottom: 18px;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  padding: 15px 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: all .3s;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+
+.input:focus {
+  border-color: #ffcc00;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, .1);
+}
+
+.input::placeholder {
+  color: #999;
+}
+
+.phoneInputWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+  transition: all .3s;
+  overflow: hidden;
+}
+
+.phoneInputWrapper:focus-within {
+  border-color: #ffcc00;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 204, 0, .1);
+}
+
+.countryCode {
+  display: flex;
+  align-items: center;
+  padding: 15px 12px;
+  background: #f0f0f0;
+  border-right: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.flag {
+  margin-right: 6px;
+  font-size: 16px;
+}
+
+.phoneInput {
+  flex: 1;
+  padding: 15px 16px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  background: transparent;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 16px;
+  background: #ffcc00;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  margin-bottom: 15px;
+}
+
+.submitButton:hover {
+  background: #e6b800;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, .3);
+}
+
+.otpButton {
+  width: 100%;
+  padding: 16px;
+  background: #fff;
+  color: #ffcc00;
+  border: 2px solid #ffcc00;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .3s;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.otpButton:hover {
+  background: #ffcc00;
+  color: #333;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 204, 0, .3);
+}
+
+.errorPopup {
+  background: #ffe5e5;
+  color: #d8000c;
+  border: 1px solid #d8000c;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 8px;
+  font-size: 14px;
+  animation: fadeIn .3s ease-in-out;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .LoginRegisterContainer {
+    padding: 8px 10px;
+    gap: 12px;
+  }
+
+  .LoginRegisterContainer p {
+    font-size: 12.5px;
+  }
+
+  .loginButton {
+    font-size: 12.5px;
+    padding: 7px 10px;
+  }
+
+  .modalContainer {
+    width: 95%;
+    max-width: none;
+    margin: 10px;
+  }
+
+  .modalContent {
+    padding: 25px 20px;
+  }
+
+  .title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .LoginRegisterContainer {
+    padding: 6px 10px;
+    gap: 10px;
+  }
+
+  .LoginRegisterContainer p {
+    font-size: 12px;
+  }
+
+  .loginButton {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .modalContainer {
+    width: 99vw;
+    height: auto;
+    max-width: 99vw;
+    max-height: 99vh;
+    margin: 0;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, .1);
+    padding: 0;
+    animation: modalSlideUp .3s ease-out;
+  }
+
+  @keyframes modalSlideUp {
+    from {
+      transform: translateY(100vh);
+    }
+
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  .modalContent {
+    padding: 18px 12px 22px;
+  }
+
+  .title {
+    font-size: 19px;
+    margin-bottom: 2px;
+  }
+
+  .input,
+  .phoneInput {
+    padding: 13px 8px;
+    font-size: 15px;
+  }
+
+  .submitButton,
+  .otpButton {
+    padding: 13px;
+    font-size: 15px;
+    margin-bottom: 11px;
+  }
+
+  .closeButton {
+    right: 12px;
+    top: 10px;
+    font-size: 24px;
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .modalContent {
+    padding: 10px 5px 15px;
+  }
+
+  .modalContainer {
+    border-radius: 10px 10px 0 0;
+  }
+
+  .title {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modalContainer {
+    width: 98%;
+    height: auto;
+    max-height: 95vh;
+  }
+
+  .modalContent {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .input,
+  .phoneInput {
+    padding: 12px 14px;
+    font-size: 16px;
+  }
+
+  .submitButton,
+  .otpButton {
+    padding: 14px;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,464 @@
+.checkoutPage {
+  font-family: "Inter", "Poppins", sans-serif;
+  background: #fafafa;
+  padding: 0 20px 20px;
+  min-height: 100vh;
+  margin-top: 8rem;
+}
+
+.cartSecureBar {
+  text-align: center;
+  background: #f8f8f8;
+  padding: 8px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: green;
+  border-bottom: 1px solid #eee;
+}
+
+.cartHeader {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cartHeader h1 {
+  font-size: 28px;
+  font-weight: 800;
+  color: #000;
+}
+
+.cartHeader p {
+  font-size: 14px;
+  color: green;
+  font-weight: 500;
+}
+
+.checkoutContainer {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.addressSection {
+  flex: 2;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.addressSection h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.addressForm .row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.addressForm input,
+.addressForm textarea {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  color-scheme: light;
+  background-color: #fff;
+}
+
+.addressForm input:focus,
+.addressForm textarea:focus {
+  border-color: #000;
+}
+
+.paymentOptions {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  font-weight: 600;
+}
+
+.paymentOption span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.paymentOption.selected {
+  border-color: #000;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  color: #000;
+}
+
+.paymentOption input {
+  display: none;
+}
+
+.continueBtn {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.continueBtn:hover {
+  background: #333;
+}
+
+.continueBtn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.summarySection {
+  flex: 1;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 10rem;
+}
+
+.viewCoupons {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rewardsApplied {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+}
+
+.rewardsApplied p {
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.savingText {
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.removeBtn {
+  background: transparent;
+  border: none;
+  color: #666;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-top: 10px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-weight: 700;
+}
+
+.green {
+  color: green;
+}
+
+.couponSidebar {
+  position: fixed;
+  top: 2rem;
+  right: -450px;
+  width: 420px;
+  height: 100vh;
+  background: #fff;
+  box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
+  z-index: 2000;
+  transition: right 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.couponSidebar.open {
+  right: 0;
+}
+
+.sidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.sidebarHeader h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.sidebarHeader button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.cartTotal {
+  font-size: 14px;
+  color: #666;
+  margin-top: 4px;
+}
+
+.sidebarContent {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.couponInputBox {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.couponInputBox input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.applyInputBtn {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.applyInputBtn:disabled {
+  background: #888;
+  cursor: not-allowed;
+}
+
+.couponMsg {
+  margin-bottom: 10px;
+  font-size: 14px;
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.successMsg {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+.errorMsg {
+  background-color: #fdecea;
+  color: #d32f2f;
+  border: 1px solid #f5c6cb;
+}
+
+.bestOffers {
+  margin-top: 20px;
+}
+
+.bestOffers h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.offerCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offerLeft {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.offerTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.offerDesc {
+  font-size: 13px;
+  color: #555;
+  margin: 4px 0 0 0;
+}
+
+.categoryText,
+.addMoreText {
+  font-size: 12px;
+  color: #777;
+  margin: 4px 0 0 0;
+  font-style: italic;
+}
+
+.expiredText {
+  font-size: 12px;
+  color: #d32f2f;
+  margin: 4px 0 0 0;
+  font-weight: 600;
+}
+
+.addMoreText {
+  color: #d32f2f;
+  font-weight: 600;
+}
+
+.noCoupons {
+  text-align: center;
+  color: #666;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.applyOfferBtn {
+  background: #000;
+  color: #fff;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.applyOfferBtn:disabled {
+  background: #ccc;
+  color: #444;
+  cursor: not-allowed;
+}
+
+.sidebarBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1500;
+}
+
+.invoiceDownloadBox {
+  margin: 40px auto;
+  text-align: center;
+  background: #f9fafb;
+  padding: 30px 20px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+}
+
+.invoiceDownloadBox h3 {
+  color: #16a34a;
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.invoiceDownloadBox p {
+  color: #374151;
+  margin-bottom: 16px;
+  font-size: 15px;
+}
+
+.downloadBtn {
+  background: #2563eb;
+  color: white;
+  padding: 12px 24px;
+  font-weight: 600;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .checkoutContainer {
+    flex-direction: column;
+  }
+  .summarySection {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkoutPage {
+    padding: 10px;
+  }
+  .addressForm .row {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+  .addressForm .row input {
+    margin-bottom: 15px;
+  }
+  .couponSidebar {
+    width: 100%;
+    right: -100%;
+  }
+}

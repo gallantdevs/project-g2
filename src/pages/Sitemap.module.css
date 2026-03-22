@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+}
+
+.mainHeading {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+
+.tree, .subTree {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-left: 10px;
+  border-left: 1px solid #ddd; 
+}
+
+.subTree {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.treeItem {
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.treeItem::before {
+  content: '';
+  position: absolute;
+  top: 12px;      
+  left: -20px;    
+  width: 15px;    
+  height: 1px;
+  background-color: #ddd;
+}
+
+.link {
+  text-decoration: none;
+  color: #555;
+  font-size: 14px;
+  font-weight: 400;
+  transition: color 0.2s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.link:hover {
+  color: #fdd835; 
+  text-decoration: underline;
+}
+
+.hasChildren {
+  font-weight: 600;
+  color: #000;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}

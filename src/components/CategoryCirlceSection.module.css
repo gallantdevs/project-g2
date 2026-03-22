@@ -1,0 +1,76 @@
+.categorySection {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 18px;
+}
+
+.scrollContainer {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+  justify-content: center;
+  margin-top: 9rem;
+}
+
+.scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.circleCard {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.circleCard:hover {
+  transform: translateY(-5px);
+}
+
+.circleImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #e4e4e4;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circleImage img {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.circleLabel {
+  font-size: 0.9rem;
+  color: #000;
+  margin-top: 6px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 600px) {
+  .circleImage {
+    width: 70px;
+    height: 70px;
+  }
+  .circleLabel {
+    font-size: 0.8rem;
+  }
+}

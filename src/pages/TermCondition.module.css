@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 90px;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+  color: #212121;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.pageHeader {
+  margin-bottom: 40px;
+}
+
+.mainTitle {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #000;
+  line-height: 1.2;
+}
+
+.sectionTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 15px;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  text-transform: capitalize;
+}
+
+.sectionTitle::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fdd835;
+  margin-top: 4px;
+  border-radius: 2px;
+}
+
+/* --- Text & Lists --- */
+.text {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #4a4a4a;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.list {
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #4a4a4a;
+  line-height: 1.8;
+}
+
+.list li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+}
+
+/* Link Styling */
+.link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN (Media Queries)
+   ========================================= */
+
+/* Tablet & Small Laptops (1024px and below) */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px 20px;
+    margin-top: 80px;
+  }
+
+  .mainTitle {
+    font-size: 26px;
+  }
+}
+
+/* Mobile Devices (768px and below) */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px 15px;
+    margin-top: 70px;
+  }
+
+  .pageHeader {
+    margin-bottom: 25px;
+  }
+
+  .mainTitle {
+    font-size: 24px;
+  }
+
+  .sectionTitle {
+    font-size: 18px;
+    margin-top: 30px;
+  }
+
+  .text,
+  .list {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+
+    .list {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px 12px;
+    margin-top: 60px;
+  }
+
+  .mainTitle {
+    font-size: 22px;
+  }
+
+  .sectionTitle {
+    font-size: 17px;
+    margin-top: 25px;
+  }
+
+  .sectionTitle::after {
+    height: 2px;
+  }
+
+  .text {
+    margin-bottom: 12px;
+  }
+}
